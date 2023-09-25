@@ -1,4 +1,6 @@
 
+
+@import '../variable/variable';
 @mixin centered{
     display: flex;
     justify-content: center;
@@ -28,3 +30,4 @@
     outline: none;
     padding: 1.3em 3em;        
 }
+
