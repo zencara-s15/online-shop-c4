@@ -1,0 +1,90 @@
+@import "../group-mixin/group-mixin";
+@import "../variable/variable";
+
+nav{
+    .nav-top{
+        height: 100px;
+        @include space-between;
+        .nav-left {
+            flex: 1;
+    
+        }
+        .nav-left{
+            @include centered;
+            img{
+                height: 100px;
+                margin-left: -100px;
+            }
+        }
+    
+        .nav-center {
+            flex: 1.5;
+    
+            ul {
+                list-style: none;
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+    
+                li {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    
+        .nav-right {
+            @include centered;
+            flex: 1;
+            display: flex;
+            justify-content: end;
+            .log-in {
+                @include log-in-btn;
+            }
+            span{
+                margin-right: 20px;
+                font-size: 30px;
+            }
+    
+            .log-in:hover {
+                background-color: #236ec4;
+                box-shadow: 0px 15px 20px rgba(46, 49, 229, 0.4);
+                color: #fff;
+                transform: translateY(-7px);
+            }
+    
+            .log-in:active {
+                transform: translateY(-1px);
+            }
+        }
+    }
+    .nav-buttom{
+        @include centered;
+        input{
+            height: 40px;
+            width: 450px;
+            border-radius: 50px;
+            border: 2px solid $sub-color;
+        }
+        .search-icon{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-left: -40px;
+            height: 40px;
+            width: 40px;
+            border-radius: 0 20px 20px 0;
+            background-color: $sub-color;
+            span{
+                font-size: x-large;
+                margin-right: 10px;
+            }
+        }
+        span{
+            margin-left: 20px;
+            font-size: 30px;
+        }
+    }
+
+}
