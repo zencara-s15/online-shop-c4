@@ -1,5 +1,6 @@
-@import "../group-mixin/group-mixin";
-@import "../variable/variable";
+@import '../variable/variable';
+@import '../group-mixin/group-mixin';
+@import '../main';
 
 nav{
     .nav-top{
@@ -7,20 +8,21 @@ nav{
         @include space-between;
         .nav-left {
             flex: 1;
-    
         }
         .nav-left{
             @include centered;
             img{
                 height: 100px;
-                margin-left: -100px;
+                margin-left: -250px;
             }
         }
-    
         .nav-center {
             flex: 1.5;
-    
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
             ul {
+                margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -65,17 +67,18 @@ nav{
             height: 40px;
             width: 450px;
             border-radius: 50px;
-            border: 2px solid $sub-color;
+            border: 2px solid $gray;
         }
         .search-icon{
             display: flex;
             justify-content: end;
             align-items: center;
-            margin-left: -40px;
+            margin-left: -45px;
             height: 40px;
             width: 40px;
             border-radius: 0 20px 20px 0;
-            background-color: $sub-color;
+            background-color: $gray;
+            border: 2px solid $gray;
             span{
                 font-size: x-large;
                 margin-right: 10px;
