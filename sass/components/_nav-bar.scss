@@ -1,5 +1,6 @@
 @import '../variable/variable';
 @import '../group-mixin/group-mixin';
+@import '../components/button';
 @import '../main';
 
 nav{
@@ -22,7 +23,7 @@ nav{
             justify-content: space-evenly;
             width: 100%;
             ul {
-                margin-right: 25px;
+                // margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -31,6 +32,7 @@ nav{
                 li {
                     a {
                         text-decoration: none;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -46,7 +48,7 @@ nav{
             }
             span{
                 margin-right: 20px;
-                font-size: 30px;
+                font-size: 1.5rem;
             }
     
             .log-in:hover {

@@ -1,3 +1,23 @@
 @import './components/nav-bar';
 @import './components/card';
+@import './main';
 
+.clothes{
+    .sell{
+        margin-top: $margin-top;
+        .sell-header{
+            @include centered;
+            .sell-line{
+                @include centered;
+                flex: 1;
+                height: 1px;
+                background-color: $black;
+            }
+        }
+        .sell-body{
+            @include space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+}
