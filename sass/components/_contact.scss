@@ -1,0 +1,23 @@
+
+
+@import '../group-mixin/group-mixin';
+@import '../variable/variable';
+.contact{
+    display: flex;
+    background-color:teal;
+    width: 90%;
+    height: 70vh;
+    justify-content: space-between;
+    margin-left: 60px;
+}
+.contact-right{
+    display: flex;
+    width: 30%;
+    height: 70vh;
+    flex-direction: column;
+    background-color: gray;
+    // margin-left:610px;
+    position: absolute;
+    margin-top:-50px;
+
+}

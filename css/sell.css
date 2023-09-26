@@ -73,7 +73,7 @@ nav .nav-top .nav-right span {
 nav .nav-top .nav-right .log-in:hover {
   background-color: #236ec4;
   box-shadow: 0px 15px 20px rgba(46, 49, 229, 0.4);
-  color: #fff;
+  color: white;
   transform: translateY(-7px);
 }
 nav .nav-top .nav-right .log-in:active {

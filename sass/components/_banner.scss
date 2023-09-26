@@ -1,0 +1,29 @@
+
+
+@import '../variable/variable';
+@import '../group-mixin/group-mixin';
+
+.banner{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color:$gray ;
+    margin-top: 20px;
+    height: 70vh;
+    
+}
+.banner-left{
+    flex:5;
+
+}
+.banner-right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 200px;
+    margin-bottom: 150px;
+    gap: 20px;
+}
+
+
+
