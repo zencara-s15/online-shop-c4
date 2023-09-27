@@ -4,6 +4,7 @@
 @import '../main';
 
 nav{
+    margin: 0 $mainMargin;
     .nav-top{
         height: 100px;
         @include space-between;
