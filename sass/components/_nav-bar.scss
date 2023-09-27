@@ -6,28 +6,33 @@ nav{
     .nav-top{
         height: 100px;
         @include space-between;
+
         .nav-left {
             flex: 1;
         }
-        .nav-left{
+
+        .nav-left {
             @include centered;
-            img{
+
+            img {
                 height: 100px;
                 margin-left: -250px;
             }
         }
+
         .nav-center {
             flex: 1.5;
             display: flex;
             justify-content: space-evenly;
             width: 100%;
+
             ul {
                 margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
                 justify-content: space-evenly;
-    
+
                 li {
                     a {
                         text-decoration: none;
@@ -37,14 +42,14 @@ nav{
                 }
             }
         }
-    
+
         .nav-right {
             @include centered;
             flex: 1;
             display: flex;
             justify-content: end;
-            
-            span{
+
+            span {
                 margin-right: 20px;
                 font-size: 1.5rem;
             }
@@ -52,25 +57,23 @@ nav{
                 transform: scale(1.1);
                 color: $teal;
             }
-            #menu{
-                font-size: 1.5rem;
-                z-index: 10001;
-                cursor: pointer;
+        }
+
+        .nav-buttom {
+            @include centered;
+
+            input {
+                height: 40px;
+                width: 450px;
+                padding-left: 30px;
+                border-radius: 50px;
+                border: 2px solid $gray;
             }
-        }
-    }
-    .nav-buttom{
-        @include centered;
-        input{
-            height: 40px;
-            width: 450px;
-            padding-left: 30px;
-            border-radius: 50px;
-            border: 2px solid $gray;
-        }
-        span{
-            margin-left: 20px;
-            font-size: 30px;
+
+            span {
+                margin-left: 20px;
+                font-size: 30px;
+            }
         }
     }
 }

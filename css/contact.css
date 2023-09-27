@@ -83,24 +83,19 @@ nav .nav-top .nav-right span:hover {
   transform: scale(1.1);
   color: teal;
 }
-nav .nav-top .nav-right #menu {
-  font-size: 1.5rem;
-  z-index: 10001;
-  cursor: pointer;
-}
-nav .nav-buttom {
+nav .nav-top .nav-buttom {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-nav .nav-buttom input {
+nav .nav-top .nav-buttom input {
   height: 40px;
   width: 450px;
   padding-left: 30px;
   border-radius: 50px;
   border: 2px solid #D9D9D9;
 }
-nav .nav-buttom span {
+nav .nav-top .nav-buttom span {
   margin-left: 20px;
   font-size: 30px;
 }
