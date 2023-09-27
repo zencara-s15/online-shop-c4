@@ -1,11 +1,19 @@
 @import './components/nav-bar';
-@import './components/card';
-@import './main';
+@import './components/product-card';
+// @import './main';
+@import './variable/body';
 
-.clothes{
+.clothes,
+.skincares,
+.foods,
+.products{
     .sell{
-        margin-top: $margin-top;
         .sell-header{
+            h1{
+                font-size: $catergory ;
+            }
+            letter-spacing: 3px;
+            margin: $mainMargin 0;
             @include centered;
             .sell-line{
                 @include centered;
@@ -15,9 +23,10 @@
             }
         }
         .sell-body{
+            margin-bottom: $mainMargin;
             @include space-between;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 50px;
         }
     }
 }
