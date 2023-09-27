@@ -1,0 +1,49 @@
+
+
+@import '../variable/variable';
+@import '../group-mixin/group-mixin';
+
+.banner{
+    @include df-alc-talc;
+    background-color:$gray ;
+    width: 100%;
+    margin-top: 20px;
+    height: 70vh;
+}
+.banner-left{
+    flex:2;
+
+}
+.banner-right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 100px;
+    margin-bottom: 150px;
+    gap: 20px;
+    font-size: $sub-title;
+}
+.map{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    background-color: red;
+
+}
+iframe {
+    width: 100%;
+    height: 50vh;
+    margin-top:70px ;
+    background-color: red;
+
+
+}
+.main-map>h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+

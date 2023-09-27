@@ -49,6 +49,12 @@ nav{
                 margin-right: 20px;
                 font-size: 1.5rem;
             }
+    
+            .log-in:hover {
+                background-color: #236ec4;
+                box-shadow: 0px 15px 20px rgba(46, 49, 229, 0.4);
+                color:$white;
+                transform: translateY(-7px);
             span:hover{
                 transform: scale(1.1);
                 color: $teal;

@@ -1,9 +1,26 @@
 @import '../variable/variable';
 
+
+@import '../variable/variable';
 @mixin centered{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@mixin df-jcc-alsc{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+@mixin df-fdc-jcc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin df-alc-talc{
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 @mixin space-between{
