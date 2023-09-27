@@ -1,0 +1,25 @@
+@import "./main";
+@import "./components/nav-bar";
+@import "./components/catagery-card";
+
+.container-1 {
+    display: flex;
+    margin-top: 100px;
+    .content-left,
+    .content-right {
+        flex: 2;
+    }
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        @include centered;
+        background: $gray;
+    }
+    .content-right {
+        height: 35.1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
