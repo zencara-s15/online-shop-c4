@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+=======
+
+@import "./components/nav-bar";
+@import "./group-mixin/group-mixin";
+@import "./variable/variable";
+@import "./components/footer";
+.banner-1{
+    display: flex;
+    background-color: $gray;
+    margin-top: $mainMargin;
+    .description{
+        h1{
+            font-size: $title;
+        }
+        @include centered;
+        width: 50%;
+        flex-direction: column;
+        gap:10px;
+    }
+}
+.banner-2{
+    .category{
+        letter-spacing: 3px;
+        margin: $mainMargin 0;
+        @include centered;
+        h1{
+            font-size: $catergory;
+        }
+        .category-line{
+            flex: 1;
+            height: 1px;
+            background-color: black;
+        }
+    }
+    .category-list{
+        @include centered;
+        width: 90%;
+        margin-left: 65px;
+        gap: 20px;
+        .card{
+            @include centered;
+            flex-direction: column;
+            background-color: $gray;
+            gap: 15px;
+            height: 40vh;
+            img{
+                background-color: aquamarine;
+            }
+        }
+    }
+    .review-list{
+        @include space-between;
+        .logos{
+            @include centered;
+            width: 30%;
+            gap: 30px;
+            .logo{
+                background-color: $gray;
+                padding: $mainMargin;
+            }
+            .stars{
+                @include space-between;
+                flex-direction: column;
+                gap: 85px;
+            }
+        }
+        .description{
+            display: flex;
+            margin-right: 20px;
+            width: 55%;
+            .description-line{
+                height: 120px;
+                width: 140px;
+                border-left: 2px solid black;
+                margin-left: -$mainMargin;
+            }
+            span{
+                @include centered;
+                text-align: center;
+                font-size: $simple-text;
+            }
+        }
+    }
+}
+>>>>>>> f2a981ee2cd63e059dfdf3441ecadd569583d26a

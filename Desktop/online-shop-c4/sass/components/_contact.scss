@@ -1,0 +1,71 @@
+
+
+@import '../group-mixin/group-mixin';
+@import '../variable/variable';
+.contact{
+    display: flex;
+    background-color:teal;
+    width: 90%;
+    height: 70vh;
+    justify-content: space-between;
+    margin-left: 60px;
+    font-size: $sub-title;
+}
+
+.contact-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 50px;
+    margin-top: 80px;
+    font-size: $simple-text;
+
+}
+.phone,
+.telegram,
+.email{
+
+    display: flex;
+    text-align: center;
+    padding-top: 50px;
+    gap: 50px;
+
+}
+
+.contact-right{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex: 1;
+    height: 70vh;
+    background-color: $white;
+    margin-top: -80px;
+    margin-right: 50px;
+    gap: 40px;
+    padding-top: 45px;
+    font-size:$sub-title ;
+
+
+}
+input{
+    width: 70%;
+    padding-bottom: 10px;
+    border: none;
+    text-align:start;
+    border-bottom: 1px solid gray;
+    font-size: $simple-text;
+
+}
+button{
+    @include df-jcc-alsc;
+   
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $gray;
+    font-size: $simple-text;
+    
+}
+
+

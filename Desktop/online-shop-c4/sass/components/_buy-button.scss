@@ -1,0 +1,37 @@
+@import '../variable/variable';
+@import '../group-mixin/group-mixin';
+
+.buy-btn{
+    width: 160px;
+    height: 35px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fffefe;
+    background-color: $teal;
+    border: none;
+    border-radius: 5px;
+    // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    padding: 1.3em 3em;
+    @include centered;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.buy-btn:hover {
+background-color: #236ec4;
+box-shadow: 0px 15px 20px rgba(46, 49, 229, 0.4);
+color: #fff;
+transform: translateY(-7px);
+}
+
+.buy-btn:active {
+transform: translateY(-1px);
+}
