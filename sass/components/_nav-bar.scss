@@ -1,9 +1,9 @@
 @import '../variable/variable';
-@import '../components/button';
 @import '../group-mixin/group-mixin';
+@import '../components/button';
+@import '../main';
 
 nav{
-    margin: 0 $mainMargin;
     .nav-top{
         height: 100px;
         @include space-between;
@@ -23,7 +23,7 @@ nav{
             justify-content: space-evenly;
             width: 100%;
             ul {
-                margin-right: 25px;
+                // margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -32,8 +32,7 @@ nav{
                 li {
                     a {
                         text-decoration: none;
-                        font-size: $sub-title;
-                        color: $teal;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -44,28 +43,23 @@ nav{
             flex: 1;
             display: flex;
             justify-content: end;
-            
+            .log-in {
+                @include log-in-btn;
+            }
             span{
                 margin-right: 20px;
                 font-size: 1.5rem;
             }
-<<<<<<< HEAD
     
             .log-in:hover {
                 background-color: #236ec4;
                 box-shadow: 0px 15px 20px rgba(46, 49, 229, 0.4);
-                color:$white;
+                color: #fff;
                 transform: translateY(-7px);
-=======
-            span:hover{
-                transform: scale(1.1);
-                color: $teal;
->>>>>>> fb29723bc26fb4f4f621ef10c5e603e9255217c8
             }
-            #menu{
-                font-size: 1.5rem;
-                z-index: 10001;
-                cursor: pointer;
+    
+            .log-in:active {
+                transform: translateY(-1px);
             }
         }
     }
@@ -74,13 +68,28 @@ nav{
         input{
             height: 40px;
             width: 450px;
-            padding-left: 30px;
             border-radius: 50px;
             border: 2px solid $gray;
+        }
+        .search-icon{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-left: -45px;
+            height: 40px;
+            width: 40px;
+            border-radius: 0 20px 20px 0;
+            background-color: $gray;
+            border: 2px solid $gray;
+            span{
+                font-size: x-large;
+                margin-right: 10px;
+            }
         }
         span{
             margin-left: 20px;
             font-size: 30px;
         }
     }
+
 }
