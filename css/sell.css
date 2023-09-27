@@ -31,6 +31,9 @@
   transform: translateY(-1px);
 }
 
+nav {
+  margin: 0 50px;
+}
 nav .nav-top {
   height: 100px;
   display: flex;
