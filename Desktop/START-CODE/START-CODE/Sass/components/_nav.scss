@@ -1,0 +1,47 @@
+nav {
+    height: 10vh;
+    background: $secondary-color;
+    @include df-jc-aic;
+    padding: 0px 50px;
+    border-bottom: 2px solid $main-color;
+
+    .logo {
+        width: 55px;
+        height: 55px;
+        background: $main-color;
+        color: $primary-color;
+        @include df-jc-aic;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    ul {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            background: $main-color;
+            padding: 10px 20px;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            list-style-type: none;
+            cursor: pointer;
+
+            li:hover {
+                background: $primary-color;
+                border: 1px solid $main-color;
+                color: $main-color;
+            }
+
+        }
+
+        a {
+            color: $primary-color;
+            font-weight: bolder;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}

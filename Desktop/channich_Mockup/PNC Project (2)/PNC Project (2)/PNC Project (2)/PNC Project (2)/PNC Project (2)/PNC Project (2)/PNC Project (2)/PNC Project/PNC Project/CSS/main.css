@@ -1,0 +1,916 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+/* _____Navigation________ */
+nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    text-align: center;
+    background: rgb(46, 45, 45);
+    height: 4.8rem;
+}
+
+.nav-left{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+.nav-left>img{
+    margin-left: 20px;
+    margin-top: 6px;
+}
+.nav-left>p{
+    margin-top: 20px;
+    font-size: 17px;
+    color: white;
+}
+
+.nav-center{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    position: relative;
+    width: 750px;
+    height: 55px;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.nav-center >a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    line-height: 10px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    bottom: -5px;
+    font-size: 20px;
+}
+.nav-center .animation{
+    position: absolute;
+    height: 6px;
+    top: 25px;
+    z-index: 0;
+    background: skyblue;
+    width: 100px;
+    border-radius: 8px;
+    transition: all .3s ease 0s;
+}
+a:nth-child(1){
+    width: 120px;
+    left: 10;
+}
+.nav-right .start-home,a:nth-child(1):hover~.animation{
+    width: 110px;
+    left: 5px;
+}
+a:nth-child(2){
+    width: 140px;
+}
+.nav-right .start-values,a:nth-child(2):hover~.animation{
+    width: 150px;
+    left: 115px;
+}
+a:nth-child(3){
+    width: 110px;
+}
+.nav-right .start-canteen,a:nth-child(3):hover~.animation{
+    width: 110px;
+    left: 260px;
+}
+a:nth-child(4){
+    width: 130px;
+}
+.nav-right .start-sports,a:nth-child(4):hover~.animation{
+    width: 110px;
+    left: 374px;
+}
+a:nth-child(5){
+    width: 120px;
+}
+.nav-right .start-aerobic,a:nth-child(5):hover~.animation{
+    width: 130px;
+    left: 489px;
+}
+a:nth-child(6){
+    width: 130px;
+}
+.nav-right .start-contact,a:nth-child(6):hover~.animation{
+    width: 140px;
+    left: 615px;
+}
+.nav-right>button{
+    background-color: orangered;
+    width: 50%;
+    padding: 10px;
+    margin-top: 22px;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    color: white;
+}
+/* __________End of Navigation_________________ */
+
+/* __________Home Page__________________ */
+#home-page{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.home-page1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)),
+            url(https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/DSC_2053.jpg);
+    background-position: left;
+    background-size: cover;
+    height: 80vh;
+}
+.home-page1>h1,
+.home-page1>p{
+    margin-left: 40px;
+}
+.home-page1>h1{
+    color: rgb(108, 205, 243);
+    font-size: 45px;
+    margin-top: 320px;
+    margin-bottom: 20px;
+}
+.home-page1>p{
+    color: white;
+    margin-bottom: 280px;
+    font-size: 19px;
+}
+/* __________End of Home Page________ */
+
+/* ____________PNC Value______________ */
+#pnc-value{
+    margin-top: 6em;
+}
+.heading{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#pnc-value > .box-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 4em;
+    row-gap: 2em;
+    padding: 30px;
+}
+
+.box{
+    height: 18em;
+    margin-left: 1em;
+}
+
+.box > img{
+    width: 80px;
+}
+
+.box>h3,
+.box>p{
+    margin-bottom: 1em;
+}
+.box>h3{
+    font-size: 25px;
+}
+
+#pnc-value > .box-container > .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.8);
+    border-radius: 15px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    width: 20em;
+}
+.btn{
+    background: teal;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
+}
+/* ___________End of Values_____________ */
+
+/* __________Canteen_______________ */
+#canteen{
+    margin-top: 6em;
+}
+.menu{
+    display: grid;
+    column-gap: 1em;
+    row-gap: 6em;
+    margin-left: 3em;
+    margin-top: 4em;
+    grid-template-areas: 
+    "food1 food2 food3"
+    "food4 food5 food6";
+}
+.food-items1 img,
+.food-items2 img,
+.food-items3 img,
+.food-items4 img,
+.food-items5 img,
+.food-items6 img{
+    width: 360px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.8);
+    border-radius: 15px;
+}
+.food-items1{
+    grid-area: food1;
+}
+.food-items2{
+    grid-area: food2;
+}
+.food-items3{
+    grid-area: food3;
+}
+.food-items4{
+    grid-area: food4;
+}
+.food-items5{
+    grid-area: food5;
+}
+.food-items6{
+    grid-area: food6;
+}
+.detail-sub{
+    font-size: 25px;
+    margin-top: 30px;
+    background: teal;
+    padding: 10px;
+    width: 8em;
+    text-align: center;
+    border-radius: 18px;
+    color: white;
+    margin-left: 80px;
+}
+table{
+    width: 88%;
+    border-collapse: collapse;
+    margin-top: 8em;
+    margin-left: 4em;
+}
+table thead{
+    background-color: #ee2828;
+}
+table thead tr th{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #ffffff;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+}
+table tbody tr td{
+    font-size: 18px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: #f1f1f1;
+    background-color: #3c3f44;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dee2e685;
+}
+
+.cards-sport{
+    display: grid;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card4 card5 card6';
+    margin-top: 3em;
+    margin-left: 10em;
+}
+.card1{
+    grid-area: card1;
+}
+.card12{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+.card5{
+    grid-area: card5;
+}
+.card6{
+    grid-area: card6;
+}
+.card1 img, .card2 img, .card3 img,
+.card4 img, .card5 img, .card6 img{
+    width: 300px;
+}
+
+/* _________Sport___________ */
+#group-sports{
+    padding-bottom: 100px;
+    margin-top: 6em;
+}
+.sports{
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin-left: 3.5em;
+    margin-top: 4em;
+}
+.sport{
+    width: 550px;
+    height: 40vh;
+    background-color: rgb(193, 198, 218);
+    border: 1px solid rgb(220, 215, 215);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+    box-shadow: 8px 0px 8px 0px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.sport>img{
+    height: 230px;
+    padding: 25px 0 0 40px;
+}
+.sport-footer{
+    padding: 90px 0 0 20px;
+}
+
+/* ___________Aerobic______________ */
+#aerobic{
+    display: grid;
+    place-items: center center;
+    margin-top: 6em;
+}
+.head{
+    margin-top: 4em;
+    font-size: 35px;
+}
+.cards{
+    display: grid;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card4 card5 card6';
+    padding: 20px;
+    grid-gap: 40px;
+}
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+.card5{
+    grid-area: card5;
+}
+.card6{
+    grid-area: card6;
+}
+.card{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    margin-top: 4em;
+}
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+.container img{
+    width: 350px;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    height: 40vh;
+}
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.2;
+}
+.card1>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card2>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card3>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card4>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card5>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card6>.container:after{
+    background-image: linear-gradient(
+    135deg,
+    #0100ec,
+    #fb36f4
+    );
+}
+.card .details h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* _______________Contact Us_________ */
+#contact-us{
+    display: grid;
+    margin-top: 6em;
+}
+#contact-us>.title{
+    padding-bottom: 40px;
+}
+.contact-us-container {
+    height: 90vh;
+    background: linear-gradient(155deg, rgba(40, 178, 233, 0.788), rgba(36, 35, 35, 0.642));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4em;
+}
+.contact-us-content {
+    color: white;
+}
+.contact-us-form {
+    width: 750px;
+    height: 90vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us-form form {
+    margin-left: 150px;
+    background: linear-gradient(155deg, rgba(237, 169, 169, 0.788), rgba(242, 238, 125, 0.642));
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0,0,0,0.20)
+}
+.title h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 4em;
+}
+.title p{
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.username,
+.passwords,
+.email,
+.textarea,
+form button {
+  margin: 10px 0px;
+}
+
+.contact-us-form form h1 {
+  text-align: center;
+}
+
+.passwords {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.passwords input {
+  width: 165px;
+  padding: 3px 0px;
+}
+.username input,
+.email input {
+  width: 335px;
+  padding: 3px 0px;
+}
+.contact-us-form form button {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* __________Location_________ */
+#location h1{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 6em;
+}
+iframe{
+    display: grid;
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 4em;
+    box-shadow: 0 0 30px rgba(0,0,0,0.25)
+    mt4em
+
+}
+
+#footer{
+    display: grid;
+    grid-template-areas: 
+    'value-pn socail-media ma-jor de-part';
+    margin-top: 6em;
+    background-color: rgb(245, 174, 43);
+    grid-gap: 20px;
+    height: 35vh;
+}
+.value-pn h3,
+.socail-media h3,
+.ma-jor h3,
+.de-part h3{
+    margin-top: 1em;
+    color: white;
+    font-size: 27px;
+}
+.value-pn p,
+.socail-media p,
+.ma-jor p,
+.de-part p{
+    margin-top: 0.4em;
+}
+.value-pn{
+    grid-area: value-pn;
+    margin-left: 3.5em;
+}
+.socail-meia{
+    grid-area: socail-media;
+}
+.ma-jor{
+    grid-area: ma-jor;
+}
+.de-part{
+    grid-area: de-part;
+}
+
+
+/* _____________Tablet Screen______________ */
+@media (max-width: 1080px) {
+    nav{
+        display: grid;
+        justify-content: space-between;
+    }
+    .nav-left p{
+        display: none;
+    }
+    .nav-right button{
+        display: none;
+    }
+    .nav-center{
+        justify-content: center;
+        margin-right: 30px;
+    }
+    .nav-left img{
+        display: none;
+    }
+    .home-page1{
+        height: 40vh;
+    }
+    .home-page1 h1{
+        font-size: 30px;
+        margin-top: 7em;
+    }
+    .box-container{
+        display: grid;
+    }
+    table {
+        width: 60%;
+        margin-left: 36px;
+    }
+    .menu{
+        display: grid;
+        column-gap: 1em;
+        row-gap: 6em;
+        margin-left: 1.3em;
+        margin-top: 4em;
+        grid-template-areas: 
+        "food1 food2"
+        "food3 food4"
+        "food5 food6";
+    }
+    .food-items1 img,
+    .food-items2 img,
+    .food-items3 img,
+    .food-items4 img,
+    .food-items5 img,
+    .food-items6 img{
+        width: 360px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.8);
+        border-radius: 15px;
+    }
+    .food-items1{
+        grid-area: food1;
+    }
+    .food-items2{
+        grid-area: food2;
+    }
+    .food-items3{
+        grid-area: food3;
+    }
+    .food-items4{
+        grid-area: food4;
+    }
+    .food-items5{
+        grid-area: food5;
+    }
+    .food-items6{
+        grid-area: food6;
+    }
+    #pnc-value > .box-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        margin-top: 4em;
+        row-gap: 2em;
+        padding: 30px;
+    }
+    .box-container{
+        margin-left: -1em;
+    }
+    .cards{
+        display: grid;
+        grid-template-areas: 
+        'card1 card2'
+        'card3 card4'
+        'card5 card6';
+        padding: 20px;
+        grid-gap: 40px;
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    .card5{
+        grid-area: card5;
+    }
+    .card6{
+        grid-area: card6;
+    }
+    .title h1{
+        margin-right: 8em;
+    }
+    .contact-us-container{
+        height: 60vh;
+    }
+    .contact-us-content p{
+        display: none;
+    }
+    .contact-us-content h1{
+        display: none;
+    }
+    form{
+        margin-bottom: 18em;
+        margin-right: 13em;
+        width: 50%;
+    }
+    
+    #footer{
+        height: 20vh;
+    }
+    .sports{
+        width: 100px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 70px;
+        margin-left: 4em;
+        margin-top: 4em;
+    }
+    .sport-footer{
+        padding: 180px 0 0 20px;
+    }
+    .sports img{
+        margin-top: 5em;
+    }
+    .sport{
+        height: 40vh;
+        width: 350%;
+    }
+    textarea{
+        width: 99%;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-center{
+        display: none;
+    }
+    .nav-center a{
+        display: none;
+    }
+    .nav-center .animation{
+        display: none;
+    }
+    #home-page .home-page1 h1{
+        margin-top: 7em;
+        font-size: 28px;
+        justify-content: end;
+        margin-left: 1em;
+        color: #ffffff;
+    }
+    #home-page .home-page1 p{
+        display: none;
+    }
+    #pnc-value > .box-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+        margin-top: 4em;
+        row-gap: 2em;
+        padding: 30px;
+    }
+    .box{
+        height: 18em;
+
+    }
+    .menu{
+        display: grid;
+        column-gap: 1em;
+        row-gap: 6em;
+        margin-left: 2em;
+        margin-top: 4em;
+        grid-template-areas: 
+        "food1"
+        "food2"  
+        "food3"
+        "food4"
+        "food5"  
+        "food6";
+    }
+    .food-items1{
+        grid-area: food1;
+    }
+    .food-items2{
+        grid-area: food2;
+    }
+    .food-items3{
+        grid-area: food3;
+    }
+    .food-items4{
+        grid-area: food4;
+    }
+    .food-items5{
+        grid-area: food5;
+    }
+    .food-items6{
+        grid-area: food6;
+    }
+    table{
+        display: none;
+    }
+    .title h1{
+        margin-left: 4em;
+    }
+    .sports{
+        width: 90px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 70px;
+        margin-left: 0em;
+        margin-top: 4em;
+    }
+    .sport-footer{
+        padding: 180px 0 0 20px;
+    }
+    .sports img{
+        margin-top:0.1em;
+        margin-right: 2em;
+    }
+    .sport{
+        height: 30vh;
+        width: 250%;
+    }
+    .sport-footer {
+        margin-top: -90px;
+    }
+    .sport-footer p{
+        display: none;
+    }
+    .sport-footer h2{
+        margin-left: 4em;
+    }
+    #aerobic{
+        margin-bottom: 5em;
+    }
+    .cards{
+        display: grid;
+        grid-template-areas: 
+        'card1'
+        'card2'
+        'card3'
+        'card4'
+        'card5'
+        'card6';
+        padding: 20px;
+        grid-gap: 40px;
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    .card5{
+        grid-area: card5;
+    }
+    .card6{
+        grid-area: card6;
+    }
+    form{
+        margin-bottom: 18em;
+        margin-right: 26.2em;
+    }
+    textarea{
+        width: 99%;
+    }
+    .title h1{
+        margin-left: 0.1em;
+    }
+    .contact-us-form{
+        margin-top: 30px;
+    }
+    .value-pn{
+        margin-left: 2em;
+    }
+    .value-pn h3,
+    .socail-media h3,
+    .ma-jor h3,
+    .de-part h3{
+        font-size: 20px;
+    }
+    footer p{
+        display: none;
+    }
+    footer{
+        height: 20vh;
+    }
+}

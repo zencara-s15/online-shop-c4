@@ -1,0 +1,102 @@
+@import "components/main";
+
+.contact-us-container {
+    width: 100%;
+    height: 90vh;
+    background-image: url(/images/bg2.jpg);
+    display: flex;
+
+    .contact-us-content {
+        width: 50%;
+        height: 90vh;
+        color: $quinary-color ;
+        background: $blur-color ;
+
+        .content {
+            width: 60%;
+            margin: 120px 80px;
+
+            h1 {
+                font-size: 70px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .contact-us-form {
+        @include df-jcc-aic;
+        width: 50%;
+        height: 90vh;
+        color: $quinary-color;
+        background: $blur-color ;
+
+        .contact-us-form {
+            @include df-jcc-aic;
+            width: 50%;
+            height: 90vh;
+            color: $quinary-color;
+            background: $blur-color ;
+
+            form h2 {
+                color: $primary-color;
+                text-align: center;
+            }
+
+            form .username,
+            form .passwords,
+            form .email,
+            form .gender,
+            form .date,
+            form .subject,
+            form .file,
+            form .fruit,
+            form button {
+                margin: 10px 0px;
+            }
+
+            form .username,
+            form .passwords {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            form .username input,
+            form .passwords input {
+                width: 48%;
+                padding: 3px 0px;
+            }
+
+            form .email input {
+                width: 99%;
+                padding: 3px 0px;
+            }
+
+            form .gender,
+            form .subject {
+                display: flex;
+            }
+
+            form .genders input,
+            form .subjects input {
+                font-size: 2px;
+            }
+
+            form .fruit {
+                padding: 3px 0px;
+            }
+
+            form label {
+                margin-right: 10px;
+            }
+
+            form button {
+                background: $primary-color;
+                color: $quinary-color;
+                border: none;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

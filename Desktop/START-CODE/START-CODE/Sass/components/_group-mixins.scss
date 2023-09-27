@@ -1,0 +1,16 @@
+@mixin df-jc-aic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin df-fdc {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

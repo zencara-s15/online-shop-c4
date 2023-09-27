@@ -1,0 +1,35 @@
+@import './components/main';
+@import './components/card';
+body {
+    background: rgba(0, 0, 0, 0.4823529412);
+}
+
+
+form {
+    width: 35%;
+    height: 70vh;
+    background: $secondary-color ;
+    @include df-fdc;
+    margin: auto;
+    margin-top: 75px;
+
+    * {
+        color: $main-color;
+        @include centered;
+        border: 2px solid $primary-color;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .form-header {
+        flex: 1;
+    }
+
+    .form-footer {
+        flex: 0.5;
+    }
+
+    .form-body {
+        flex: 4;
+    }
+}

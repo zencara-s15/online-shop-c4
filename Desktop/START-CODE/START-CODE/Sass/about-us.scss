@@ -1,0 +1,41 @@
+@import './components/main';
+@import './components/card';
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    @include df-fdc;
+}
+
+.company-background,
+.company-mission,
+.main-bottom {
+    margin: 10px;
+}
+
+.company-background h1,
+.company-mission h1,
+.main-bottom h1 {
+    margin: 10px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.company-background p,
+.company-mission p,
+.main-bottom p {
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.service {
+    width: 25%;
+}

@@ -1,0 +1,23 @@
+
+@import "components/main";
+@import "components/service";
+
+.about-container {
+    padding: 20px 200px;
+    @include df-jcc-aic;
+    @include df-fdc;
+
+    .group-service {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    h3,
+    p,
+    img {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
