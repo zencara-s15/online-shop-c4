@@ -58,22 +58,14 @@ nav{
                 color: $teal;
             }
         }
-
-        .nav-buttom {
-            @include centered;
-
-            input {
-                height: 40px;
-                width: 450px;
-                padding-left: 30px;
-                border-radius: 50px;
-                border: 2px solid $gray;
-            }
-
-            span {
-                margin-left: 20px;
-                font-size: 30px;
-            }
+    }
+    .nav-buttom {
+        input{
+            width: 300px;
+            height: 35px;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+        @include centered;
         }
     }
-}
