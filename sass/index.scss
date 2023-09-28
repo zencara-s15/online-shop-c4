@@ -3,24 +3,33 @@
 @import "./group-mixin/group-mixin";
 @import "./variable/variable";
 @import "./components/footer";
+@import "./components/catagery-card";
 .banner-1{
+    height: 450px;
     display: flex;
-    background-color: $gray;
+    background-color: #94F3F7;
     margin-top: $mainMargin;
     .description{
         h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: $title;
+            background-color: rgba(233, 169, 85, 0.81);
+            color: rgb(14, 14, 158);
+            padding: 15px;
+            border-radius: 20px 0;
         }
         @include centered;
-        width: 50%;
+        margin-top: -100px;
+        width: 60%;
         flex-direction: column;
-        gap:10px;
+        gap:20px;
     }
 }
 .banner-2{
     .category{
         letter-spacing: 3px;
-        margin: $mainMargin 0;
+        margin: 30px 0;
+        padding: 30px;
         @include centered;
         h1{
             font-size: $catergory;
@@ -31,21 +40,8 @@
             background-color: black;
         }
     }
-    .category-list{
-        @include centered;
-        width: 90%;
-        margin-left: 65px;
-        gap: 20px;
-        .card{
-            @include centered;
-            flex-direction: column;
-            background-color: $gray;
-            gap: 15px;
-            height: 40vh;
-            img{
-                background-color: aquamarine;
-            }
-        }
+    .category:nth-child(1){
+        margin-bottom: -70px;
     }
     .review-list{
         @include space-between;
@@ -61,6 +57,9 @@
                 @include space-between;
                 flex-direction: column;
                 gap: 85px;
+                .icons{
+                    color: orange;
+                }
             }
         }
         .description{
@@ -71,13 +70,12 @@
                 height: 120px;
                 width: 140px;
                 border-left: 2px solid black;
-                margin-left: -$mainMargin;
             }
             span{
                 @include centered;
-                text-align: center;
                 font-size: $simple-text;
             }
         }
     }
 }
+

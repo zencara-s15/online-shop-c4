@@ -2,7 +2,8 @@
 
 @import '../group-mixin/group-mixin';
 @import '../variable/variable';
-.contact{
+@import './buy-button';
+.contact-us{
     display: flex;
     background-color:teal;
     width: 90%;
@@ -11,7 +12,6 @@
     margin-left: 60px;
     font-size: $sub-title;
 }
-
 .contact-left{
     flex: 1;
     display: flex;
@@ -20,24 +20,18 @@
     margin-left: 50px;
     margin-top: 80px;
     font-size: $simple-text;
-
 }
-.phone,
-.telegram,
-.email{
-
+.socail{
     display: flex;
     text-align: center;
     padding-top: 50px;
     gap: 50px;
-
 }
-
 .contact-right{
     display: flex;
     text-align: center;
     flex-direction: column;
-    flex: 1;
+    flex: 0.5;
     height: 70vh;
     background-color: $white;
     margin-top: -80px;
@@ -45,27 +39,32 @@
     gap: 40px;
     padding-top: 45px;
     font-size:$sub-title ;
-
-
-}
-input{
-    width: 70%;
-    padding-bottom: 10px;
-    border: none;
-    text-align:start;
-    border-bottom: 1px solid gray;
-    font-size: $simple-text;
-
-}
-button{
-    @include df-jcc-alsc;
-   
-    width: 30%;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: $gray;
-    font-size: $simple-text;
+    input{
+        width: 70%;
+        padding-bottom: 10px;
+        border: none;
+        text-align:start;
+        border-bottom: 1px solid gray;
+        font-size: $simple-text;
     
+    }
 }
+.contact-right>.buy-btn{
+    display: flex;
+    align-self: center;
+}
+.contact-left >.socail>.material-icons{
+    color:teal;
+    background-color:white;
+    border-radius: 5px;
+}
+.contact-left >.socail>.material-icons:hover{
+    transform: translate(1px);
+    background-color: black;
+    color:orange;
+    box-shadow: 0px 15px 20px rgba(234, 227, 225, 0.4);
+}
+
+
 
 

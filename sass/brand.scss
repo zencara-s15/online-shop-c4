@@ -3,7 +3,7 @@
 @import "./components/catagery-card";
 @import "./components/footer";
 
-.container-1 {
+#container-1 {
     display: flex;
     margin-top: 100px;
     height: 30rem;
@@ -24,13 +24,13 @@
     }
 }
 
-.container-2{
-    @extend .container-1;
+#container-2{
+    @extend #container-1;
     flex-direction: row-reverse;
 }
-.container-3{
-    @extend .container-1;
+#container-3{
+    @extend #container-1;
 }
-.container-4{
-    @extend .container-2;
+#container-4{
+    @extend #container-2;
 }

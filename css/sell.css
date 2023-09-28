@@ -31,6 +31,13 @@
   transform: translateY(-1px);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Signika Negative", sans-serif;
+}
+
 nav .nav-top {
   height: 100px;
   display: flex;
@@ -56,7 +63,6 @@ nav .nav-top .nav-center {
   width: 100%;
 }
 nav .nav-top .nav-center ul {
-  margin-right: 25px;
   list-style: none;
   width: 100%;
   display: flex;
@@ -64,8 +70,7 @@ nav .nav-top .nav-center ul {
 }
 nav .nav-top .nav-center ul li a {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: teal;
+  font-size: 1rem;
 }
 nav .nav-top .nav-right {
   display: flex;

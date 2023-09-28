@@ -1,6 +1,7 @@
 @import '../variable/variable';
-@import '../components/button';
 @import '../group-mixin/group-mixin';
+@import '../components/button';
+@import '../main';
 
 nav{
     .nav-top{
@@ -27,7 +28,7 @@ nav{
             width: 100%;
 
             ul {
-                margin-right: 25px;
+                // margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -36,8 +37,7 @@ nav{
                 li {
                     a {
                         text-decoration: none;
-                        font-size: $sub-title;
-                        color: $teal;
+                        font-size: 1rem;
                     }
                 }
             }
