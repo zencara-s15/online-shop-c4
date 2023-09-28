@@ -31,8 +31,13 @@
   transform: translateY(-1px);
 }
 
+nav {
+  width: 100%;
+}
 nav .nav-top {
-  height: 100px;
+  padding: 0 50px;
+  background-color: #D9D9D9;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +51,7 @@ nav .nav-top .nav-left {
   align-items: center;
 }
 nav .nav-top .nav-left img {
-  height: 100px;
+  height: 80px;
   margin-left: -250px;
 }
 nav .nav-top .nav-center {
@@ -79,16 +84,28 @@ nav .nav-top .nav-right span {
   margin-right: 20px;
   font-size: 1.5rem;
 }
+nav .nav-top .nav-right a {
+  color: black;
+}
 nav .nav-top .nav-right span:hover {
   transform: scale(1.1);
   color: teal;
+  cursor: pointer;
 }
-nav .nav-buttom {
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10001;
+}
+
+.nav-buttom {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
-nav .nav-buttom input {
+.nav-buttom input {
   width: 300px;
   height: 35px;
   border-radius: 20px;

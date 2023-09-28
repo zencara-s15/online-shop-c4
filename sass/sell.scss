@@ -1,12 +1,13 @@
 @import './components/nav-bar';
 @import './components/product-card';
-// @import './main';
-@import './variable/body';
+// @import './variable/body';
+@import './main';
 
 .clothes,
 .skincares,
 .foods,
 .products{
+    margin: 0 $mainMargin;
     .sell{
         .sell-header{
             h1{

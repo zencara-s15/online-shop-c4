@@ -3,19 +3,23 @@
 @import '../group-mixin/group-mixin';
 
 nav{
+    width: 100%;
     .nav-top{
-        height: 100px;
+         
+        padding:0 50px;
+        background-color: $gray;
+        height: 80px;
         @include space-between;
-
         .nav-left {
             flex: 1;
         }
+    
 
         .nav-left {
             @include centered;
 
             img {
-                height: 100px;
+                height: 80px;
                 margin-left: -250px;
             }
         }
@@ -49,23 +53,35 @@ nav{
             display: flex;
             justify-content: end;
 
-            span {
+            span{
                 margin-right: 20px;
                 font-size: 1.5rem;
+            }
+            a {
+                color: $black;
             }
             span:hover{
                 transform: scale(1.1);
                 color: $teal;
+                cursor: pointer;
             }
         }
     }
-    .nav-buttom {
-        input{
-            width: 300px;
-            height: 35px;
-            border-radius: 20px;
-            padding-left: 20px;
-        }
-        @include centered;
-        }
+}
+    nav{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10001;
+}
+.nav-buttom {
+    @include centered;
+    margin-top: 20px;
+    input{
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 20px;
     }
+}
+
