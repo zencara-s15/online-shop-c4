@@ -1,0 +1,70 @@
+@import "./main";
+@import "./components/button";
+
+
+#bill-payment{
+    @include centered;
+    margin-top: 50px;
+    gap: 40px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    height: 25rem;
+    width: 25rem;
+    margin-left: 25rem;
+}
+.bill-text, 
+.pay-text{
+    margin-bottom: 40px;
+    color: $teal;
+}
+
+.user-name, .user-email,
+.user-address, .user-place{
+    @include flex-column;
+    gap: 10px;
+}
+.user-name input, .user-email input,
+.user-address input, .user-place input{
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid $teal;
+    
+}
+
+.user-name-card, .user-code,
+.expire-month{
+    @include flex-column;
+    gap: 15px;
+}
+.user-name-card input, .user-code input,
+.expire-month input{
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid $teal;
+}
+
+.card-payment img{
+    width: 50px;
+    margin-bottom: 5px;
+}
+.user-name, .user-email,
+.user-address, .user-place,
+.user-name-card, .user-code,
+.expire-month{
+    font-size: 14px;
+}
+
+.pro-cess{
+    margin-left: 33rem;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: $teal;
+    color: white;
+}
+

@@ -1,10 +1,12 @@
 @import "./main";
 @import "./components/nav-bar";
 @import "./components/catagery-card";
+@import "./components/footer";
 
-.container-1 {
+#container-1 {
     display: flex;
     margin-top: 100px;
+    height: 30rem;
     .content-left,
     .content-right {
         flex: 2;
@@ -15,11 +17,20 @@
         @include centered;
         background: $gray;
     }
-    .content-right {
-        height: 35.1rem;
+    .content-right {    
         img {
             width: 100%;
         }
     }
 }
 
+#container-2{
+    @extend #container-1;
+    flex-direction: row-reverse;
+}
+#container-3{
+    @extend #container-1;
+}
+#container-4{
+    @extend #container-2;
+}
