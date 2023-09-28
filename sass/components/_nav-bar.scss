@@ -1,11 +1,11 @@
 @import '../variable/variable';
-@import '../components/button';
 @import '../group-mixin/group-mixin';
+@import '../components/button';
+@import '../main';
 
 nav{
     width: 100%;
-    .nav-top{
-         
+    .nav-top{         
         padding:0 50px;
         background-color: $gray;
         height: 80px;
@@ -31,7 +31,7 @@ nav{
             width: 100%;
 
             ul {
-                margin-right: 25px;
+                // margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -40,7 +40,7 @@ nav{
                 li {
                     a {
                         text-decoration: none;
-                        font-size: $sub-title;
+                        font-size: 1rem;
                         color: $teal;
                     }
                 }
