@@ -124,14 +124,12 @@ nav .nav-buttom input {
   flex-direction: column;
   width: 100%;
   height: 70vh;
-  background-color: red;
 }
 
 iframe {
   width: 100%;
   height: 50vh;
   margin-top: 70px;
-  background-color: red;
 }
 
 .main-map > h1 {
