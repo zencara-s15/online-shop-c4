@@ -4,23 +4,47 @@
 @import '../group-mixin/group-mixin';
 @import '../main';
 footer{
-    background-color: rgb(144, 180, 181);
+    background-color: rgba(10, 23, 39, 0.883);
     color: $white;
     display: flex;
     margin-top: $mainMargin;
-    padding: $mainMargin;
-    gap: 50px;
+    padding: 30px;
     .footer-left{
-        justify-content: space-around;
         display: flex;
+        justify-content: space-around;
         width: 80%;
         .footer-left-list1{
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
+            gap: 20px;
+            .title{
+                h2{
+                    color: orange;
+                    text-decoration: underline;
+                    font-size: 1.7rem;
+                }
+            }
             .child-in-title{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                @include flex-column;
+                gap: 10px;
+                .flag{
+                    display: flex;
+                    gap: 20px;
+                    img{
+                        background-color: white;
+                    }
+                }
+                span{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                    a:hover{
+                        background-color: rgb(64, 240, 217);
+                        color: black;
+                        padding: 5px;
+                        border-radius: 5px
+                    }
+                }
             }
         }
     }
@@ -31,9 +55,18 @@ footer{
             @include centered;
             flex-direction: column;
             margin: 20px;
-            i{
-                font-size: $title;
-                border: 2px solid white;
+            gap: 10px;
+            span{
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                a:hover{
+                    background-color: rgb(64, 240, 217);
+                    color: black;
+                    padding: 5px;
+                    border-radius: 5px
+                }
             }
         }
     }
