@@ -7,30 +7,35 @@
     display: flex;
     margin-top: 100px;
     height: 30rem;
+
     .content-left,
     .content-right {
         flex: 2;
     }
+
     .content-left {
         display: flex;
         flex-direction: column;
         @include centered;
         background: $gray;
     }
-    .content-right {    
+
+    .content-right {
         img {
             width: 100%;
         }
     }
 }
 
-#container-2{
+#container-2 {
     @extend #container-1;
     flex-direction: row-reverse;
 }
-#container-3{
+
+#container-3 {
     @extend #container-1;
 }
-#container-4{
+
+#container-4 {
     @extend #container-2;
 }

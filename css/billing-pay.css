@@ -46,7 +46,7 @@
   gap: 40px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   height: 25rem;
-  width: 25rem;
+  width: 30rem;
   margin-left: 25rem;
 }
 
@@ -56,15 +56,19 @@
   color: teal;
 }
 
-.user-name, .user-email,
-.user-address, .user-place {
+.user-name,
+.user-email,
+.user-address,
+.user-place {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.user-name input, .user-email input,
-.user-address input, .user-place input {
+.user-name input,
+.user-email input,
+.user-address input,
+.user-place input {
   width: 180px;
   padding: 5px;
   margin-bottom: 10px;
@@ -72,14 +76,16 @@
   border: 1px solid teal;
 }
 
-.user-name-card, .user-code,
+.user-name-card,
+.user-code,
 .expire-month {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.user-name-card input, .user-code input,
+.user-name-card input,
+.user-code input,
 .expire-month input {
   width: 180px;
   padding: 5px;
@@ -93,15 +99,18 @@
   margin-bottom: 5px;
 }
 
-.user-name, .user-email,
-.user-address, .user-place,
-.user-name-card, .user-code,
+.user-name,
+.user-email,
+.user-address,
+.user-place,
+.user-name-card,
+.user-code,
 .expire-month {
   font-size: 14px;
 }
 
 .pro-cess {
-  margin-left: 33rem;
+  margin-left: 35rem;
   margin-top: 20px;
   padding: 12px;
   border-radius: 5px;
