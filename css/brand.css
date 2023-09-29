@@ -112,19 +112,6 @@ nav {
   z-index: 10001;
 }
 
-.nav-buttom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.nav-buttom input {
-  width: 300px;
-  height: 35px;
-  border-radius: 20px;
-  padding-left: 20px;
-}
-
 .brand-card {
   display: flex;
   justify-content: space-evenly;
@@ -257,7 +244,6 @@ footer .footer-right .contact span a:hover {
 
 #container-1, #container-3, #container-2, #container-4 {
   display: flex;
-  margin-top: 100px;
   height: 30rem;
 }
 #container-1 .content-left, #container-3 .content-left, #container-2 .content-left, #container-4 .content-left,
@@ -280,5 +266,14 @@ footer .footer-right .contact span a:hover {
 }
 
 #container-2, #container-4 {
+  margin-top: 100px;
   flex-direction: row-reverse;
+}
+
+#container-3 {
+  margin-top: 100px;
+}
+
+#container-4 {
+  margin-top: 100px;
 }/*# sourceMappingURL=brand.css.map */

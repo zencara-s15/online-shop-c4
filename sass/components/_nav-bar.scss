@@ -31,7 +31,6 @@ nav{
             width: 100%;
 
             ul {
-                // margin-right: 25px;
                 list-style: none;
                 width: 100%;
                 display: flex;
@@ -74,14 +73,3 @@ nav{
         top: 0;
         z-index: 10001;
 }
-.nav-buttom {
-    @include centered;
-    margin-top: 20px;
-    input{
-    width: 300px;
-    height: 35px;
-    border-radius: 20px;
-    padding-left: 20px;
-    }
-}
-
