@@ -1,0 +1,57 @@
+@import "./main";
+
+
+.suc-container {
+    @include flex-column;
+    width: 28rem;
+    margin-left: 22rem;
+    // margin-top: 50rem;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px rgb(251, 243, 228);
+    background-color: rgb(201, 193, 178);
+}
+
+.suc-content {
+    margin-right: 50px;
+}
+
+.succ-ess {
+    @include flex-column;
+    @include centered;
+    width: 30rem;
+    margin-bottom: 10px;
+    border-radius: $border-radius ;
+
+    img {
+        width: 15rem;
+        margin-right: $mainMargin;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 10px;
+        color: $white;
+        margin-right: $mainMargin;
+    }
+
+    p {
+        font-size: 13px;
+        margin-top: 5px;
+        margin-right: $mainMargin;
+        color: $white;
+    }
+}
+
+.order-text {
+    display: flex;
+    gap: 12.8rem;
+    border-bottom: 2px solid $yellow;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    margin-right: $mainMargin;
+
+    span {
+        color: $white;
+    }
+}
+
