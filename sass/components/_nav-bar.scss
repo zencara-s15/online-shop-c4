@@ -3,22 +3,35 @@
 @import '../components/button';
 @import '../main';
 
-nav{
+nav {
+    
     width: 100%;
-    .nav-top{         
-        padding:0 50px;
-        background-color: $gray;
+    .nav-top {
+        padding: 0 50px;
+        @include responsive(mobile){
+            padding: 0;
+        }
+        @include responsive(tablet){
+            padding: 0;
+        }
+        background-color: $white;
         height: 80px;
         @include space-between;
+    
         .nav-left {
             flex: 1;
         }
-    
 
         .nav-left {
             @include centered;
 
             img {
+                @include responsive(mobile){
+                    margin-left: 0;
+                }
+                @include responsive(tablet){
+                    margin-left: 0;
+                }
                 height: 80px;
                 margin-left: -250px;
             }
@@ -37,39 +50,161 @@ nav{
                 justify-content: space-evenly;
 
                 li {
+                    display: inline-block;
+                    list-style: none;
+                    cursor: pointer;
+                    position: relative;
+                    color: #333;
+
                     a {
                         text-decoration: none;
                         font-size: 1rem;
                         color: $teal;
+                        font-weight: 500;
+                        @include responsive(mobile){
+                            display: none;
+                        }
                     }
                 }
+
+                li:after {
+                    content: "";
+                    width: 0;
+                    height: 3px;
+                    background: $teal;
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.5s;
+                }
+
+                li:hover::after {
+                    width: 100%;
+                }
+                
             }
         }
-
         .nav-right {
             @include centered;
             flex: 1;
             display: flex;
             justify-content: end;
 
-            span{
-                margin-right: 20px;
-                font-size: 1.5rem;
+            .nav-desk {
+                @include centered;
+                display: flex;
+                justify-content: end;
+                @include responsive(tablet){
+                    span{
+                        display: none;
+                    }
+                    .log-in {
+                        display: none;
+                    }
+
+                }
+
+                span {
+                    // display: none;
+                    margin-right: 20px;
+                    font-size: 1.5rem;
+                }
+
+                a {
+                    color: $black;
+                }
+
+                span:hover {
+                    transform: scale(1.1);
+                    color: $teal;
+                    cursor: pointer;
+                }
+
+                
             }
-            a {
-                color: $black;
-            }
-            span:hover{
-                transform: scale(1.1);
-                color: $teal;
-                cursor: pointer;
+
+            .nav-responsiive {
+                display: none;
+                @include responsive(tablet){
+                    display: block;
+                }
+                @include responsive(mobile){
+                    width: 300px;
+                }
+                width: 100px;
+                background: #d9d9d9;
+                margin: 300px 0;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    a {
+                        text-decoration: none;
+                        color: #2d2f31;
+                    }
+                }
+                li:hover{
+                    background-color: $teal;
+                    a{
+                        color: $white;
+                    }
+                }
+
+                span {
+                    @include responsive(tablet){
+                        padding: 29px 25px;
+                    }
+                    @include responsive(mobile){
+                        padding: 29px 50px;
+                    }
+                    background: $teal;
+                    color: white;
+                    font-size: 1.2em;
+                    font-variant: small-caps;
+                    cursor: pointer;
+                    display: block;
+                }
+
+                span::after {
+                    float: right;
+                }
+                span:hover{
+                    background-color: black;
+                    a{
+                        color: $white;
+                    }
+                }
+
+                .slide {
+                    clear: both;
+                    width: 100%;
+                    height: 0px;
+                    overflow: hidden;
+                    text-align: center;
+                    transition: height .4s;
+                }
+
+                .slide li {
+                    padding: 30px;
+                }
+
+                #touch {
+                    position: absolute;
+                    opacity: 0;
+                    height: 20px;
+                }
+
+                #touch:checked+.slide {
+                    height: 400px;
+                }
             }
         }
     }
 }
-    nav{
+    nav {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 10001;
-}
+    }

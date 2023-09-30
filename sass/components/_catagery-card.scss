@@ -9,9 +9,15 @@
         gap: 5px;
 
         img {
-            width: 190px;
+            width: 220px;
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20),
                 0 6px 6px rgba(0, 0, 0, 0.17);
+            @include responsive(tablet){
+                width: 150px;
+            }
+            @include responsive(mobile){
+                width: 120px;
+            }
         }
 
         i {

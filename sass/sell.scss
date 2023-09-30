@@ -3,10 +3,13 @@
 // @import './variable/body';
 @import './main';
 
+
 .clothes,
 .skincares,
 .foods,
 .products{
+    display: flex;
+    flex-direction: column;
     margin: 0 $mainMargin;
     .sell{
         .sell-header{
@@ -25,8 +28,11 @@
         }
         .sell-body{
             margin-bottom: $mainMargin;
-            @include space-between;
+            width: 100%;
+            height: auto;
+            display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             gap: 50px;
         }
     }

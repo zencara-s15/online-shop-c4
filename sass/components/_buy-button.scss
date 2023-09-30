@@ -17,8 +17,20 @@
     outline: none;
     padding: 1.3em 3em;
     @include centered;
+    @include responsive(tablet){
+        width: 80px;
+        padding: 0.7em;
+
+    }
+    @include responsive(mobile){
+        width: 50px;
+        padding:0.2em;
+    }
 }
 a{
+    @include responsive(mobile){
+        font-size: 0.6em;
+    }
     text-decoration: none;
     color: white;
     font-size: 12px;

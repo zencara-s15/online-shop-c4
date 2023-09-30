@@ -28,11 +28,28 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .buy-btn {
+    width: 80px;
+    padding: 0.7em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .buy-btn {
+    width: 50px;
+    padding: 0.2em;
+  }
+}
 
 a {
   text-decoration: none;
   color: white;
   font-size: 12px;
+}
+@media screen and (max-width: 780px) {
+  a {
+    font-size: 0.6em;
+  }
 }
 
 .buy-btn:hover {

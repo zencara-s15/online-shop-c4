@@ -43,11 +43,21 @@ nav {
 }
 nav .nav-top {
   padding: 0 50px;
-  background-color: #D9D9D9;
+  background-color: white;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 780px) {
+  nav .nav-top {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top {
+    padding: 0;
+  }
 }
 nav .nav-top .nav-left {
   flex: 1;
@@ -61,6 +71,16 @@ nav .nav-top .nav-left img {
   height: 80px;
   margin-left: -250px;
 }
+@media screen and (max-width: 780px) {
+  nav .nav-top .nav-left img {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-left img {
+    margin-left: 0;
+  }
+}
 nav .nav-top .nav-center {
   flex: 1.5;
   display: flex;
@@ -73,10 +93,36 @@ nav .nav-top .nav-center ul {
   display: flex;
   justify-content: space-evenly;
 }
+nav .nav-top .nav-center ul li {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  color: #333;
+}
 nav .nav-top .nav-center ul li a {
   text-decoration: none;
   font-size: 1rem;
   color: teal;
+  font-weight: 500;
+}
+@media screen and (max-width: 780px) {
+  nav .nav-top .nav-center ul li a {
+    display: none;
+  }
+}
+nav .nav-top .nav-center ul li:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: teal;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+nav .nav-top .nav-center ul li:hover::after {
+  width: 100%;
 }
 nav .nav-top .nav-right {
   display: flex;
@@ -86,17 +132,109 @@ nav .nav-top .nav-right {
   display: flex;
   justify-content: end;
 }
-nav .nav-top .nav-right span {
+nav .nav-top .nav-right .nav-desk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-right .nav-desk span {
+    display: none;
+  }
+  nav .nav-top .nav-right .nav-desk .log-in {
+    display: none;
+  }
+}
+nav .nav-top .nav-right .nav-desk span {
   margin-right: 20px;
   font-size: 1.5rem;
 }
-nav .nav-top .nav-right a {
+nav .nav-top .nav-right .nav-desk a {
   color: black;
 }
-nav .nav-top .nav-right span:hover {
+nav .nav-top .nav-right .nav-desk span:hover {
   transform: scale(1.1);
   color: teal;
   cursor: pointer;
+}
+nav .nav-top .nav-right .nav-responsiive {
+  display: none;
+  width: 100px;
+  background: #d9d9d9;
+  margin: 300px 0;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-right .nav-responsiive {
+    display: block;
+  }
+}
+@media screen and (max-width: 780px) {
+  nav .nav-top .nav-right .nav-responsiive {
+    width: 300px;
+  }
+}
+nav .nav-top .nav-right .nav-responsiive li {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+nav .nav-top .nav-right .nav-responsiive li a {
+  text-decoration: none;
+  color: #2d2f31;
+}
+nav .nav-top .nav-right .nav-responsiive li:hover {
+  background-color: teal;
+}
+nav .nav-top .nav-right .nav-responsiive li:hover a {
+  color: white;
+}
+nav .nav-top .nav-right .nav-responsiive span {
+  background: teal;
+  color: white;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-right .nav-responsiive span {
+    padding: 29px 25px;
+  }
+}
+@media screen and (max-width: 780px) {
+  nav .nav-top .nav-right .nav-responsiive span {
+    padding: 29px 50px;
+  }
+}
+nav .nav-top .nav-right .nav-responsiive span::after {
+  float: right;
+}
+nav .nav-top .nav-right .nav-responsiive span:hover {
+  background-color: black;
+}
+nav .nav-top .nav-right .nav-responsiive span:hover a {
+  color: white;
+}
+nav .nav-top .nav-right .nav-responsiive .slide {
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s;
+}
+nav .nav-top .nav-right .nav-responsiive .slide li {
+  padding: 30px;
+}
+nav .nav-top .nav-right .nav-responsiive #touch {
+  position: absolute;
+  opacity: 0;
+  height: 20px;
+}
+nav .nav-top .nav-right .nav-responsiive #touch:checked + .slide {
+  height: 400px;
 }
 
 nav {
@@ -158,11 +296,28 @@ nav {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .buy-btn {
+    width: 80px;
+    padding: 0.7em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .buy-btn {
+    width: 50px;
+    padding: 0.2em;
+  }
+}
 
 a {
   text-decoration: none;
   color: white;
   font-size: 12px;
+}
+@media screen and (max-width: 780px) {
+  a {
+    font-size: 0.6em;
+  }
 }
 
 .buy-btn:hover {
