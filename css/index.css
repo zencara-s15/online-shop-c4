@@ -356,6 +356,7 @@ footer .footer-right .contact span a:hover {
 
 .brand-card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 100px;
   margin-left: 4px;
@@ -370,12 +371,12 @@ footer .footer-right .contact span a:hover {
 }
 @media screen and (max-width: 1024px) {
   .brand-card .gallery img {
-    width: 150px;
+    width: 90%;
   }
 }
 @media screen and (max-width: 780px) {
   .brand-card .gallery img {
-    width: 120px;
+    width: 90%;
   }
 }
 .brand-card .gallery i {
@@ -400,7 +401,7 @@ footer .footer-right .contact span a:hover {
 }
 
 .gallery {
-  width: 25%;
+  width: 22%;
   margin: 15px;
   box-sizing: border-box;
   float: left;
@@ -411,6 +412,18 @@ footer .footer-right .contact span a:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: 0.18s;
   background: #f2f2f2;
+}
+@media screen and (max-width: 1024px) {
+  .gallery {
+    width: 45%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 780px) {
+  .gallery {
+    width: 35%;
+    height: auto;
+  }
 }
 
 .gallery:hover {
@@ -427,7 +440,6 @@ footer .footer-right .contact span a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -100px;
   width: 60%;
   flex-direction: column;
   gap: 20px;
@@ -435,8 +447,8 @@ footer .footer-right .contact span a:hover {
 .banner-1 .description h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 2.5rem;
-  background-color: rgba(233, 169, 85, 0.81);
-  color: rgb(14, 14, 158);
+  background-color: teal;
+  color: white;
   padding: 15px;
   border-radius: 20px 0;
 }
