@@ -1,26 +1,41 @@
-
-
 @import '../variable/variable';
 @import '../group-mixin/group-mixin';
 @import '../main';
 footer{
-    background-color: rgba(10, 23, 39, 0.883);
+    background-color: $teal;
     color: $white;
-    display: flex;
     margin-top: $mainMargin;
     padding: 30px;
+    @include space-evenly;
+    @include responsive(tablet){
+        flex-direction: column;
+    }
+    @include responsive(mobile){
+        flex-direction: column;
+    }
+
     .footer-left{
         display: flex;
         justify-content: space-around;
-        width: 80%;
+        flex: 1.5;
+        @include responsive(tablet){
+            flex: 1;
+        }
+        @include responsive(mobile){
+            flex: 1;
+        }
         .footer-left-list1{
+            flex: 1;
             @include flex-column;
             gap: 20px;
             .title{
                 h2{
-                    color: orange;
+                    color: $white;
                     text-decoration: underline;
                     font-size: 1.7rem;
+                    @include responsive(mobile){
+                        font-size: $sub-title;
+                    }
                 }
             }
             .child-in-title{
@@ -49,8 +64,12 @@ footer{
         }
     }
     .footer-right{
-        @include centered;
-        width: 30%;
+        flex: 0.5;
+        @include space-evenly;
+        @include responsive(tablet){
+            width: 40%;
+            margin: 30px 30%;
+        }
         .contact{
             @include centered;
             flex-direction: column;

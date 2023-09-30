@@ -4,7 +4,6 @@
 @import '../main';
 
 nav {
-    
     width: 100%;
     .nav-top {
         padding: 0 50px;
@@ -112,6 +111,11 @@ nav {
 
                 a {
                     color: $black;
+                }
+                .log-in{
+                    a{
+                        color: $white;
+                    }
                 }
 
                 span:hover {
