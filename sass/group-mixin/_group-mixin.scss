@@ -20,6 +20,11 @@
     flex-direction: column;
 }
 
+@mixin background-image{
+    background-position: center;
+    background-color: cover;
+    background-repeat: no-repeat;
+}
 // responsive
 
 $breakpoint: ( 

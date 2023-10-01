@@ -45,8 +45,7 @@ nav {
             ul {
                 list-style: none;
                 width: 100%;
-                display: flex;
-                justify-content: space-evenly;
+                @include space-evenly;
 
                 li {
                     display: inline-block;

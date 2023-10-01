@@ -4,75 +4,88 @@
 
 section{
     background: linear-gradient(155deg, rgba(45, 40, 40, 0.618), rgba(8, 8, 8, 0.607)), url(/image/contact-page/contact-group.png);
-    background-position: center;
-    background-color: cover;
-    background-repeat: no-repeat;
+    @include background-image;
     background-attachment: fixed;
     color: white;
     display: flex;
+    .contact-container{
+        display: flex;
+        background: linear-gradient(155deg, rgba(2, 2, 2, 0.447), rgba(2, 0, 0, 0.612));
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 160px;
+        .contact-us-content{
+            width: 60%;
+            @include flex-column;
+            gap: 20px;
+            .contact-us-connect{
+                @include flex-column;
+                gap: 20px;
+                .contacts{
+                    display: flex;
+                    align-items: center;
+                    margin-left: $mainMargin;
+                    gap: 25px;
+                    span{
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-us-form{
+            color: white;
+            @include centered;
+            margin: -170px 0 0 40px;
+            form {
+                
+                border-radius: 5px;
+                color: $black;
+                background-color: rgba(255, 255, 255, 0.667);
+                padding: 10px 20px;
+                @include flex-column;
+                h1 {
+                    text-align: center;
+                }
+                .email,
+                .message,
+                .username{
+                    margin: 10px 0px;
+                    border-bottom: 1px solid black;
+                    input{
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        width: 300px;
+                        padding: 3px 0px;
+                    }
+                }
+                .send {
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    width: 50%;
+                    background: $teal;
+                    color: $white;
+                    border: none;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 30px 0 30px 0;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                .send:hover {
+                    background-color: #000000;
+                    box-shadow: 0px 15px 20px rgba(33, 32, 31, 0.326);
+                    color: #ffffff;
+                    transform: translateY(-7px);
+                } 
+            }  
+        }
+    }
 }
-.contact-container{
-    display: flex;
-    background: linear-gradient(155deg, rgba(2, 2, 2, 0.447), rgba(2, 0, 0, 0.612));
-    border-radius: 10px;
-    width: 90%;
-    padding: 30px;
-    margin: 160px 0 40px 60px;
-}
-.contact-us-content{
-    width: 60%;
-    @include flex-column;
-    gap: 20px;
-}
-.contact-us-connect{
-    @include flex-column;
-    gap: 20px;
-}
-.contacts{
-    display: flex;
-    align-items: center;
-    margin-left: $mainMargin;
-    gap: 25px;
-}
-.contacts>span>a{
-    color: white;
-}
-.contact-us-form{
-    color: white;
-    @include centered;
-    margin-top: -200px;
-}
-.contact-us-form form {
-    margin-left: 40px;
-    // background: linear-gradient(155deg, rgba(239, 232, 232, 0.788), rgba(192, 181, 181, 0.642));
-    background-color: $gray;
-    color: black;
-    padding: 10px 20px;
-    @include flex-column;
-}
-input{
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-}
-.username,
-.email,
-.message{
-  margin: 10px 0px;
-  border-bottom: 1px solid black;
-}
-.contact-us-form form h1 {
-  text-align: center;
-}
-.username input,
-.message input,
-.email input {
-  width: 335px;
-  padding: 3px 0px;
-}
-.contact-us-form form button {
-  background: teal;
-  color: white;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-}
+
+
+
