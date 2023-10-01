@@ -94,31 +94,36 @@ nav .nav-top .nav-center {
   justify-content: space-evenly;
   width: 100%;
 }
-nav .nav-top .nav-center ul {
+nav .nav-top .nav-center .nav-center-responsiive,
+nav .nav-top .nav-center .nav-center-default {
   list-style: none;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-nav .nav-top .nav-center ul li {
+nav .nav-top .nav-center .nav-center-responsiive li,
+nav .nav-top .nav-center .nav-center-default li {
   display: inline-block;
   list-style: none;
   cursor: pointer;
   position: relative;
   color: #333;
 }
-nav .nav-top .nav-center ul li a {
+nav .nav-top .nav-center .nav-center-responsiive li a,
+nav .nav-top .nav-center .nav-center-default li a {
   text-decoration: none;
   font-size: 1rem;
   color: teal;
   font-weight: 500;
 }
 @media screen and (max-width: 780px) {
-  nav .nav-top .nav-center ul li a {
+  nav .nav-top .nav-center .nav-center-responsiive li a,
+  nav .nav-top .nav-center .nav-center-default li a {
     display: none;
   }
 }
-nav .nav-top .nav-center ul li:after {
+nav .nav-top .nav-center .nav-center-responsiive li:after,
+nav .nav-top .nav-center .nav-center-default li:after {
   content: "";
   width: 0;
   height: 3px;
@@ -128,8 +133,24 @@ nav .nav-top .nav-center ul li:after {
   bottom: -10px;
   transition: 0.5s;
 }
-nav .nav-top .nav-center ul li:hover::after {
+nav .nav-top .nav-center .nav-center-responsiive li:hover::after,
+nav .nav-top .nav-center .nav-center-default li:hover::after {
   width: 100%;
+}
+nav .nav-top .nav-center .nav-center-responsiive {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-center .nav-center-responsiive {
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-center .nav-center-default {
+    display: none;
+  }
 }
 nav .nav-top .nav-right {
   display: flex;
@@ -156,7 +177,6 @@ nav .nav-top .nav-right .nav-desk {
 }
 nav .nav-top .nav-right .nav-desk span {
   margin-right: 20px;
-  font-size: 1.5rem;
 }
 nav .nav-top .nav-right .nav-desk a {
   color: black;
@@ -187,35 +207,33 @@ nav .nav-top .nav-right .nav-responsiive {
 }
 nav .nav-top .nav-right .nav-responsiive li {
   display: flex;
-  justify-content: center;
-  text-align: center;
 }
 nav .nav-top .nav-right .nav-responsiive li a {
   text-decoration: none;
   color: #2d2f31;
 }
 nav .nav-top .nav-right .nav-responsiive li:hover {
-  background-color: teal;
+  background-color: #f2f2f2;
 }
 nav .nav-top .nav-right .nav-responsiive li:hover a {
-  color: white;
+  color: teal;
 }
 nav .nav-top .nav-right .nav-responsiive span {
   background: teal;
   color: white;
-  font-size: 1.2em;
+  font-size: 2.5rem;
   font-variant: small-caps;
   cursor: pointer;
   display: block;
 }
 @media screen and (max-width: 1024px) {
   nav .nav-top .nav-right .nav-responsiive span {
-    padding: 29px 25px;
+    padding: 19px 35px;
   }
 }
 @media screen and (max-width: 780px) {
   nav .nav-top .nav-right .nav-responsiive span {
-    padding: 29px 50px;
+    padding: 19px 60px;
   }
 }
 nav .nav-top .nav-right .nav-responsiive span::after {
@@ -236,7 +254,10 @@ nav .nav-top .nav-right .nav-responsiive .slide {
   transition: height 0.4s;
 }
 nav .nav-top .nav-right .nav-responsiive .slide li {
-  padding: 30px;
+  padding: 20px;
+}
+nav .nav-top .nav-right .nav-responsiive .slide li a {
+  font-size: 1rem;
 }
 nav .nav-top .nav-right .nav-responsiive #touch {
   position: absolute;
@@ -244,7 +265,7 @@ nav .nav-top .nav-right .nav-responsiive #touch {
   height: 20px;
 }
 nav .nav-top .nav-right .nav-responsiive #touch:checked + .slide {
-  height: 400px;
+  height: auto;
 }
 
 nav {
@@ -401,12 +422,11 @@ footer .footer-left .footer-left-list1 .child-in-title .flag img {
 footer .footer-left .footer-left-list1 .child-in-title span a {
   text-decoration: none;
   color: white;
+  font-size: 1rem;
 }
 footer .footer-left .footer-left-list1 .child-in-title span a:hover {
-  background-color: rgb(64, 240, 217);
   color: black;
-  padding: 5px;
-  border-radius: 5px;
+  text-decoration: underline;
 }
 footer .footer-right {
   flex: 0.5;
@@ -432,10 +452,8 @@ footer .footer-right .contact span a {
   color: white;
 }
 footer .footer-right .contact span a:hover {
-  background-color: rgb(64, 240, 217);
+  text-decoration: underline;
   color: black;
-  padding: 5px;
-  border-radius: 5px;
 }
 
 #container-1, #container-3, #container-2, #container-4 {
