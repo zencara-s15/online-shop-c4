@@ -42,19 +42,17 @@ nav {
             justify-content: space-evenly;
             width: 100%;
 
-            ul {
+            .nav-center-responsiive,
+            .nav-center-default{
                 list-style: none;
                 width: 100%;
-                display: flex;
-                justify-content: space-evenly;
-
+                @include space-evenly;
                 li {
                     display: inline-block;
                     list-style: none;
                     cursor: pointer;
                     position: relative;
                     color: #333;
-
                     a {
                         text-decoration: none;
                         font-size: 1rem;
@@ -82,6 +80,19 @@ nav {
                 }
                 
             }
+            .nav-center-responsiive{
+                display: none;
+                @include responsive(tablet){
+                    display: block;
+                    @include space-evenly;
+                }
+            }
+            .nav-center-default{
+                @include responsive(tablet){
+                    display: none;
+                }
+            }
+
         }
         .nav-right {
             @include centered;
@@ -106,7 +117,7 @@ nav {
                 span {
                     // display: none;
                     margin-right: 20px;
-                    font-size: 1.5rem;
+                    // font-size: 1.5rem;
                 }
 
                 a {
@@ -141,35 +152,31 @@ nav {
 
                 li {
                     display: flex;
-                    justify-content: center;
-                    text-align: center;
                     a {
                         text-decoration: none;
                         color: #2d2f31;
                     }
                 }
                 li:hover{
-                    background-color: $teal;
+                    background-color: #f2f2f2;
                     a{
-                        color: $white;
+                        color: $teal;
                     }
                 }
-
                 span {
                     @include responsive(tablet){
-                        padding: 29px 25px;
+                        padding: 19px 35px;
                     }
                     @include responsive(mobile){
-                        padding: 29px 50px;
+                        padding: 19px 60px;
                     }
                     background: $teal;
                     color: white;
-                    font-size: 1.2em;
+                    font-size: $title;
                     font-variant: small-caps;
                     cursor: pointer;
                     display: block;
                 }
-
                 span::after {
                     float: right;
                 }
@@ -179,7 +186,6 @@ nav {
                         color: $white;
                     }
                 }
-
                 .slide {
                     clear: both;
                     width: 100%;
@@ -188,19 +194,21 @@ nav {
                     text-align: center;
                     transition: height .4s;
                 }
-
                 .slide li {
-                    padding: 30px;
-                }
+                    padding: 20px;
+                    a{
+                    font-size: $simple-text;
 
+                    }
+                }
                 #touch {
                     position: absolute;
                     opacity: 0;
                     height: 20px;
+                    
                 }
-
                 #touch:checked+.slide {
-                    height: 400px;
+                    height: auto;
                 }
             }
         }

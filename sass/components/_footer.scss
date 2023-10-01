@@ -52,12 +52,11 @@ footer{
                     a{
                         text-decoration: none;
                         color: white;
+                        font-size: $simple-text;
                     }
                     a:hover{
-                        background-color: rgb(64, 240, 217);
                         color: black;
-                        padding: 5px;
-                        border-radius: 5px
+                        text-decoration:underline;
                     }
                 }
             }
@@ -81,10 +80,8 @@ footer{
                     color: white;
                 }
                 a:hover{
-                    background-color: rgb(64, 240, 217);
+                    text-decoration: underline;
                     color: black;
-                    padding: 5px;
-                    border-radius: 5px
                 }
             }
         }

@@ -11,9 +11,9 @@ body {
   align-items: center;
   min-height: 100vh;
   background-image: url(/image/Home-Page-Picture/clothes-3987460_1280.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-color: cover;
+  background-repeat: no-repeat;
 }
 body section {
   position: relative;

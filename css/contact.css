@@ -94,31 +94,36 @@ nav .nav-top .nav-center {
   justify-content: space-evenly;
   width: 100%;
 }
-nav .nav-top .nav-center ul {
+nav .nav-top .nav-center .nav-center-responsiive,
+nav .nav-top .nav-center .nav-center-default {
   list-style: none;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-nav .nav-top .nav-center ul li {
+nav .nav-top .nav-center .nav-center-responsiive li,
+nav .nav-top .nav-center .nav-center-default li {
   display: inline-block;
   list-style: none;
   cursor: pointer;
   position: relative;
   color: #333;
 }
-nav .nav-top .nav-center ul li a {
+nav .nav-top .nav-center .nav-center-responsiive li a,
+nav .nav-top .nav-center .nav-center-default li a {
   text-decoration: none;
   font-size: 1rem;
   color: teal;
   font-weight: 500;
 }
 @media screen and (max-width: 780px) {
-  nav .nav-top .nav-center ul li a {
+  nav .nav-top .nav-center .nav-center-responsiive li a,
+  nav .nav-top .nav-center .nav-center-default li a {
     display: none;
   }
 }
-nav .nav-top .nav-center ul li:after {
+nav .nav-top .nav-center .nav-center-responsiive li:after,
+nav .nav-top .nav-center .nav-center-default li:after {
   content: "";
   width: 0;
   height: 3px;
@@ -128,8 +133,24 @@ nav .nav-top .nav-center ul li:after {
   bottom: -10px;
   transition: 0.5s;
 }
-nav .nav-top .nav-center ul li:hover::after {
+nav .nav-top .nav-center .nav-center-responsiive li:hover::after,
+nav .nav-top .nav-center .nav-center-default li:hover::after {
   width: 100%;
+}
+nav .nav-top .nav-center .nav-center-responsiive {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-center .nav-center-responsiive {
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-top .nav-center .nav-center-default {
+    display: none;
+  }
 }
 nav .nav-top .nav-right {
   display: flex;
@@ -156,7 +177,6 @@ nav .nav-top .nav-right .nav-desk {
 }
 nav .nav-top .nav-right .nav-desk span {
   margin-right: 20px;
-  font-size: 1.5rem;
 }
 nav .nav-top .nav-right .nav-desk a {
   color: black;
@@ -187,35 +207,33 @@ nav .nav-top .nav-right .nav-responsiive {
 }
 nav .nav-top .nav-right .nav-responsiive li {
   display: flex;
-  justify-content: center;
-  text-align: center;
 }
 nav .nav-top .nav-right .nav-responsiive li a {
   text-decoration: none;
   color: #2d2f31;
 }
 nav .nav-top .nav-right .nav-responsiive li:hover {
-  background-color: teal;
+  background-color: #f2f2f2;
 }
 nav .nav-top .nav-right .nav-responsiive li:hover a {
-  color: white;
+  color: teal;
 }
 nav .nav-top .nav-right .nav-responsiive span {
   background: teal;
   color: white;
-  font-size: 1.2em;
+  font-size: 2.5rem;
   font-variant: small-caps;
   cursor: pointer;
   display: block;
 }
 @media screen and (max-width: 1024px) {
   nav .nav-top .nav-right .nav-responsiive span {
-    padding: 29px 25px;
+    padding: 19px 35px;
   }
 }
 @media screen and (max-width: 780px) {
   nav .nav-top .nav-right .nav-responsiive span {
-    padding: 29px 50px;
+    padding: 19px 60px;
   }
 }
 nav .nav-top .nav-right .nav-responsiive span::after {
@@ -236,7 +254,10 @@ nav .nav-top .nav-right .nav-responsiive .slide {
   transition: height 0.4s;
 }
 nav .nav-top .nav-right .nav-responsiive .slide li {
-  padding: 30px;
+  padding: 20px;
+}
+nav .nav-top .nav-right .nav-responsiive .slide li a {
+  font-size: 1rem;
 }
 nav .nav-top .nav-right .nav-responsiive #touch {
   position: absolute;
@@ -244,7 +265,7 @@ nav .nav-top .nav-right .nav-responsiive #touch {
   height: 20px;
 }
 nav .nav-top .nav-right .nav-responsiive #touch:checked + .slide {
-  height: 400px;
+  height: auto;
 }
 
 nav {
@@ -269,86 +290,115 @@ section {
   color: white;
   display: flex;
 }
-
-.contact-container {
+section .contact-container {
+  width: 100%;
   display: flex;
   background: linear-gradient(155deg, rgba(2, 2, 2, 0.447), rgba(2, 0, 0, 0.612));
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 20px;
   padding: 30px;
-  margin: 160px 0 40px 60px;
+  margin-top: 160px;
 }
-
-.contact-us-content {
-  width: 60%;
+@media screen and (max-width: 780px) {
+  section .contact-container {
+    flex-direction: column;
+  }
+}
+section .contact-container .contact-us-content .contact-us-title {
+  flex: 0.6;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.contact-us-connect {
+@media screen and (max-width: 780px) {
+  section .contact-container .contact-us-content .contact-us-title h1 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  section .contact-container .contact-us-content .contact-us-title span {
+    font-size: x-small;
+  }
+}
+section .contact-container .contact-us-content .contact-us-connect {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.contacts {
+section .contact-container .contact-us-content .contact-us-connect .contacts {
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin: 20px 50px;
   gap: 25px;
 }
-
-.contacts > span > a {
+@media screen and (max-width: 780px) {
+  section .contact-container .contact-us-content .contact-us-connect .contacts {
+    margin: 20px 0;
+  }
+}
+section .contact-container .contact-us-content .contact-us-connect .contacts span a {
   color: white;
 }
-
-.contact-us-form {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -200px;
+@media screen and (max-width: 780px) {
+  section .contact-container .contact-us-content .contact-us-connect img {
+    width: 25px;
+  }
 }
-
-.contact-us-form form {
-  margin-left: 40px;
-  background-color: #D9D9D9;
+section .contact-container .contact-us-form {
+  color: white;
+  flex: 0.4;
+  margin: -170px 0 0 40px;
+}
+@media screen and (max-width: 780px) {
+  section .contact-container .contact-us-form {
+    margin: 50px 50px;
+  }
+}
+section .contact-container .contact-us-form form {
+  border-radius: 5px;
   color: black;
+  background-color: rgba(255, 255, 255, 0.667);
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
 }
-
-input {
-  border: none;
-  background-color: rgba(255, 255, 255, 0);
+section .contact-container .contact-us-form form h1 {
+  text-align: center;
 }
-
-.username,
-.email,
-.message {
+section .contact-container .contact-us-form form .email,
+section .contact-container .contact-us-form form .message,
+section .contact-container .contact-us-form form .username {
   margin: 10px 0px;
   border-bottom: 1px solid black;
 }
-
-.contact-us-form form h1 {
-  text-align: center;
-}
-
-.username input,
-.message input,
-.email input {
-  width: 335px;
+section .contact-container .contact-us-form form .email input,
+section .contact-container .contact-us-form form .message input,
+section .contact-container .contact-us-form form .username input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 300px;
   padding: 3px 0px;
 }
-
-.contact-us-form form button {
+section .contact-container .contact-us-form form .send {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 50%;
   background: teal;
   color: white;
   border: none;
-  padding: 5px;
+  padding: 15px;
   border-radius: 5px;
+  margin: 30px 0 30px 0;
+}
+section .contact-container .contact-us-form form .send a {
+  text-decoration: none;
+  color: white;
+}
+section .contact-container .contact-us-form form .send:hover {
+  background-color: #000000;
+  box-shadow: 0px 15px 20px rgba(33, 32, 31, 0.326);
+  color: #ffffff;
+  transform: translateY(-7px);
 }
 
 * {
@@ -422,12 +472,11 @@ footer .footer-left .footer-left-list1 .child-in-title .flag img {
 footer .footer-left .footer-left-list1 .child-in-title span a {
   text-decoration: none;
   color: white;
+  font-size: 1rem;
 }
 footer .footer-left .footer-left-list1 .child-in-title span a:hover {
-  background-color: rgb(64, 240, 217);
   color: black;
-  padding: 5px;
-  border-radius: 5px;
+  text-decoration: underline;
 }
 footer .footer-right {
   flex: 0.5;
@@ -453,8 +502,6 @@ footer .footer-right .contact span a {
   color: white;
 }
 footer .footer-right .contact span a:hover {
-  background-color: rgb(64, 240, 217);
+  text-decoration: underline;
   color: black;
-  padding: 5px;
-  border-radius: 5px;
 }/*# sourceMappingURL=contact.css.map */
