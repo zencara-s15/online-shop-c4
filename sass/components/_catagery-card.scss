@@ -1,5 +1,6 @@
 .brand-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 100px;
     margin-left: 4px;
@@ -13,10 +14,10 @@
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20),
                 0 6px 6px rgba(0, 0, 0, 0.17);
             @include responsive(tablet){
-                width: 150px;
+                width: 90%;
             }
             @include responsive(mobile){
-                width: 120px;
+                width: 90%;
             }
         }
 
@@ -48,7 +49,16 @@
 }
 
 .gallery {
-    width: 25%;
+    width: 22%;
+    @include responsive(tablet){
+        width: 45%;
+        height: auto;
+    }
+    @include responsive(mobile){
+        width: 35%;
+        height: auto;
+
+    }
     margin: 15px;
     box-sizing: border-box;
     float: left;

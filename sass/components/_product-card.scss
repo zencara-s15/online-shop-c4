@@ -15,8 +15,10 @@
   padding: 0.5em;
   padding-bottom: 3.4em;
   @include responsive(tablet){
-    width: 25%;
-
+    width: 28%;
+  @include responsive(mobile){
+    width: 40%;
+  }
   }
 
     .title {

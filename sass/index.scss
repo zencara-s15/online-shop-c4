@@ -12,13 +12,12 @@
         h1{
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: $title;
-            background-color: rgba(233, 169, 85, 0.81);
-            color: rgb(14, 14, 158);
+            background-color: $teal;
+            color: $white;
             padding: 15px;
             border-radius: 20px 0;
         }
         @include centered;
-        margin-top: -100px;
         width: 60%;
         flex-direction: column;
         gap:20px;
